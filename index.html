@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" as="style"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <title>Al-Yaman | Home</title>
   <meta content="" name="description">
@@ -18,13 +18,19 @@
   <!-- Favicons -->
   <link href="assets/img/img-0.webp" rel="icon">
   <link href="assets/img/img0.webp" rel="apple-touch-icon">
+  <link rel="shortcut icon" href="assets/img/img0.webp" type="image/x-icon">
 
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+  <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick-1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.css">
+  <link href="assets/css/navbar.css" rel="stylesheet" />
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,119 +40,765 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
 
-  </script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <!-- Template Main CSS File -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick-1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.css"/>
+
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="assets/magicScroll/magicscroll.css" />
   <script type="text/javascript" src="assets/magicScroll/magicscroll.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Inconsolata|Ubuntu+Mono" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="ism/css/my-slider.css" />
+  <script src="ism/js/ism-2.2.min.js"></script>
+
+  <link href="./jquery.easy_slides.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./jquery.easy_slides.js"></script>
   <!-- =======================================================
 
-  ======================================================== -->
+  =============
+  =========================================== -->
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
+  <header id="header">
 
-      <h1 class="logo">
+   
+    <!-- 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded fixed-top">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+        <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+      </svg>
+     <div class="navbar d-flex flex-row justify-content-start flex-grow-0" id="h1-logo" style="padding: 30px 0 0 0;margin:-5 30 -15 0;background:#edcd1f;"> 
+        <a href="index.html" class="col-md-2 d-flex justify-content-between"><img src="assets/img/img0.webp" alt=""
+          class="img-fluid"></a>
+          <a href="index.html" class="col-md-10 d-flex justify-content-between"
+          style="font-size: xx-large;">Al-Yaman</a>
+          
+          
+          <br>
+          <p class="ps-5 ms-5 col-md-6 d-flex justify-content-between">
+            <small class="text-muted" style="font-size: large;">
+              METAL MACHINING
+            </small>
+          </p>
+        </div>
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav text-right list-inline">
+        <li class="nav-item"><a class="nav-link scrollto active  mx-5" href="#HOME">HOME</a></li>
+        <li class="nav-item"><a class="nav-link scrollto mx-5" href="#BASIC">BASIC</a></li>
+        <li class="nav-item"><a class="nav-link scrollto mx-5" href="#PRODUCTS">PRODUCTS</a></li>
+        <li class="nav-item"><a class="nav-link scrollto mx-5" href="#CLIENTS">CLIENTS</a></li>
+        <li class="nav-item"><a class="nav-link scrollto mx-5" href="#ABOUT">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link scrollto mx-5" href="#CONTACT">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        <a href="index.html" class="logo"><img src="assets/img/img0.webp" alt="" class="img-fluid"></a>
-        <a href="index.html">Al-Yaman</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container col-auto" style="margin: 0px 0 0 -20px;">
+        <div class="navbar col-auto" id="h1-logo" style="    padding: 5px 12px 5px 12px;
+        margin: -50px 0 -67px 0;;background:#edcd1f">
+          <a href="index.html" class="navbar-brand"  ><img src="assets/img/img0.webp" alt="" class="img-fluid"></a>
+          <a href="index.html" class="navbar-brand" style="font-size: xx-large;">Al-Yaman</a>
+          <br>
+          <a class="navbar-brand">
+            <small class="text-muted" style="font-size: large;">
+              METAL MACHINING
+            </small>
+          </a>
+          </div>
+         
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
+            <ul class="ml-auto d-flex justify-content-around">
+              <li class="nav-item active"><a class="nav-link scrollto active" href="#HOME">HOME<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link scrollto" href="#BASIC">BASIC</a></li>
+              <li class="nav-item"><a class="nav-link scrollto" href="#PRODUCTS">PRODUCTS</a></li>
+              <li class="nav-item"><a class="nav-link scrollto" href="#CLIENTS">CLIENTS</a></li>
+              <li class="nav-item"><a class="nav-link scrollto" href="#ABOUT">ABOUT</a></li>
+              <li class="nav-item"><a class="nav-link scrollto" href="#CONTACT">CONTACT</a></li>
+    
+            </ul>
+          </span></button>
+          <div class="collapse navbar-collapse " id="navbarResponsive">
+              <ul class="ml-auto d-flex justify-content-around">
+                <li class="nav-item active"><a class="nav-link scrollto active" href="#HOME">HOME<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link scrollto" href="#BASIC">BASIC</a></li>
+                <li class="nav-item"><a class="nav-link scrollto" href="#PRODUCTS">PRODUCTS</a></li>
+                <li class="nav-item"><a class="nav-link scrollto" href="#CLIENTS">CLIENTS</a></li>
+                <li class="nav-item"><a class="nav-link scrollto" href="#ABOUT">ABOUT</a></li>
+                <li class="nav-item"><a class="nav-link scrollto" href="#CONTACT">CONTACT</a></li>
+      
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+          </div>
+      </div>
+  </nav>  -->
+
+ 
+
+    <div class=" d-flex  justify-content-between  align-items-center fixed-top" style="    margin: -7em 15em 0 -3em;
+    padding: 5.5em 0 0 0;">
+      <div class="navbar d-flex" id="h1-logo" style="    padding: 1em 0.4em 0.7em 0em;
+      margin: -1.4em;;background:#edcd1f;">
+        <a href="index.html" id="a1-logo" class="col-md-2 d-flex justify-content-between"><img id="img-logo"
+            src="assets/img/img0.webp" alt="" class="img-fluid" style="
+              /* margin: 0em -4.8em -2.5em 4.2em; */
+              "></a>
+        <a href="index.html" id="a2-logo" class="col-md-10 d-flex justify-content-between" style="
+        /* font-size: 4rem; */
+        color: #024;">Al-Yaman</a>
+
+
         <br>
-        <p class="h6" style="margin: -2vh -50vh -1vh 8vh;">
-          <small class="text-muted">
+        <p class="ps-5 ms-5 col-md-6 d-flex justify-content-between" id="p-logo" style="margin: 0em 0em -1em 0em;
+        padding: 0.1em 0em 0.2em 5em;">
+          <small class="text-muted" id="small-logo" style="
+          /* font-size: 1.8rem;
+          margin: -0.3em -7.5em -0.1em 5.8em;
+          padding: 0.1em 0em 0.2em 0.1em; */
+          ">
             METAL MACHINING
           </small>
         </p>
-      </h1>
+      </div>
 
 
 
-      <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
         <ul>
-          <li><a class="nav-link scrollto active" href="#HOME">HOME</a></li>
-          <li><a class="nav-link scrollto" href="#BASIC">BASIC</a></li>
-          <li><a class="nav-link scrollto" href="#PRODUCTS">PRODUCTS</a></li>
-          <li><a class="nav-link scrollto o" href="#CLIENTS">CLIENTS</a></li>
-          <li><a class="nav-link scrollto" href="#ABOUT">ABOUT</a></li>
-          <li><a class="nav-link scrollto" href="#CONTACT">CONTACT</a></li>
+          <li class="nav-item"><a class="nav-link scrollto active  mx-5" href="#HOME">HOME</a></li>
+          <li class="nav-item"><a class="nav-link scrollto mx-5" href="#BASIC">BASIC</a></li>
+          <li class="nav-item"><a class="nav-link scrollto mx-5" href="#PRODUCTS">PRODUCTS</a></li>
+          <li class="nav-item"><a class="nav-link scrollto mx-5" href="#CLIENTS">CLIENTS</a></li>
+          <li class="nav-item"><a class="nav-link scrollto mx-5" href="#ABOUT">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link scrollto mx-5" href="#CONTACT">CONTACT</a></li>
 
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+        <i class="bi bi-list mobile-nav-toggle  "></i>
 
+      </nav>
     </div>
-  </header><!-- End Header -->
+
+    <style>
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 100vh;
+      }
+
+      .carousel-item:nth-child(1) {
+        background-image: url('assets/img/img1.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(2) {
+        background-image: url('assets/img/img2.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-image: url('assets/img/img3.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .carousel-item:nth-child(4) {
+        background-image: url('assets/img/img4.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+
+      .navbar .nav-link:hover,
+      .active {
+        color: #edcd1f !important;
+      }
+
+      @media (max-width: 992px) {
+
+        .navbar .nav-link {
+          color: #333 !important;
+        }
+
+        .navbar .nav-link:hover,
+        .active {
+          color: #edcd1f !important;
+        }
+      }
+    </style>
+
+  </header>
+
+
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="HOME" class="d-flex align-items-center">
-    <div class="" data-aos="fade-up" data-aos-delay="100">
+  <section id="HOME" class="d-flex align-items-center" style="max-width: 140%; width:100%;height:auto;margin:-80px 0 0 0;">
+    <div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="100"
+      style="max-width: 140%; width:100%;height:100%">
+     
 
-      <div class="container-fluid" style="padding: 0 ;">
-        <div class="carousel slide img-fluid" data-ride="carousel" id="carousel">
+      <!-- <style type="text/css">   
+        * {
+          box-sizing: border-box;
+        }
+    
+        .slider {
+            width: 100%;
+            margin: 100px auto;
+        }
+    
+        .slick-slide {
+          margin: 0px 20px;
+        }
+    
+        .slick-slide img {
+          width: 100%;
+        }
+    
+        .slick-prev:before,
+        .slick-next:before {
+          color: black;
+        }
+    
+    
+        .slick-slide {
+          transition: all ease-in-out .3s;
+          opacity: .2;
+        }
+        
+        .slick-active {
+          opacity: .5;
+        }
+    
+        .slick-current {
+          opacity: 1;
+        }
+      </style>
+      <section class="autoplay slider" data-sizes="50vw">
+        <div>
+          <img data-lazy="./assets/img/img1.webp" data-srcset="./assets/img/img1.webp 650w, ./assets/img/img1.webp 960w" data-sizes="100vw">
+        </div>
+        <div>
+          <img data-lazy="./assets/img/img2.webp" data-srcset="./assets/img/img2.webp 650w, ./assets/img/img2.webp 960w" data-sizes="100vw">
+        </div>
+        <div>
+          <img data-lazy="./assets/img/img3.webp"  data-srcset="./assets/img/img3.webp 650w, ./assets/img/img3.webp 960w" data-sizes="100vw">
+        </div>
+        <div>
+          <img data-lazy="./assets/img/img4.webp"  data-srcset="./assets/img/img4.webp 650w, ./assets/img/img4.webp 960w" data-sizes="100vw">
+        </div>
+    
+        <div>
+         
+          <img data-lazy="./assets/img/img1.webp"  data-srcset="./assets/img/img1.webp?text=6-650w 650w, ./assets/img/img1.webp?text=6-960w 960w">
+        </div>
+      </section>
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick-1.8.1/slick-1.8.1/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+  $('.autoplay').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }); 
+    </script> -->
 
-          <ol class="carousel-indicators">
+
+
+
+      <!-- Demo styles -->
+      <!-- <style>
+        .swiper-container {
+          width: 100%;
+          height: 100%;
+        }
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .swiper-slide .text {
+          font-size: 51px;
+          max-width: 400px;
+          line-height: 1.3;
+
+          margin: 0 auto;
+         
+        }
+
+        .swiper-container-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+          top: 85%;
+        }
+
+        .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+          padding: 9px
+        }
+      </style>
+
+
+      <div style="--swiper-navigation-color: #edcd1f; --swiper-pagination-color: #edcd1f;"
+        class="swiper-container mySwiper">
+        <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+        <div class="swiper-container mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/img1.webp" class="img-fluid card-img-top">
+              <div class="carousel-caption d-none d-md-block" data-swiper-parallax="10">
+                <p class=" h1 text-center p-5 mb-2 ism-caption ism-caption-1" style="font-family: 'Monoton', fantasy;font-size: 5rem;
+                letter-spacing: 0.3em;
+                left: 0em;
+                top: 2em;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.604);
+                margin: -6em 0em 0em -6em; content:'';
+              /* margin-left:calc(30% - 25%); */
+              border: 3px solid white;
+  box-sizing: border-box; " data-delay='200'>INTEGRATED <br>DESIGNS</p>
+              </div>
+            </div>
+            <div class="swiper-slide"><img src="assets/img/img2.webp" class="img-fluid card-img-top"></div>
+            <div class="swiper-slide"><img src="assets/img/img3.webp" class="img-fluid card-img-top"></div>
+            <div class="swiper-slide"><img src="assets/img/img4.webp" class="img-fluid card-img-top">
+              <div class="text" data-swiper-parallax="-10">
+                <p>
+                  INTEGRATED <br>DESIGNS
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: true,
+          },
+          slidesPerView: 1,
+          loop: true,
+          spaceBetween: 30,
+          centeredSlides: true,
+          speed: 600,
+          parallax: true,
+          autoplay: {
+            delay: 95500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script> -->
+
+
+      <div class="container-fluid swiper-container mySwipe" style="padding: 0 ;margin: -38px 0 0 0;">
+        <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+        <div class="swiper-container mySwiper">
+          <div class="swiper-wrapper">
+        <div class="carousel slide img-fluid swiper-slide" data-ride="carousel" id="carousel">
+          <div class="ism-slider" data-play_type="loop" data-image_fx="zoomrotate" data-radio_type="thumbnail"
+            id="my-slider">
+            <ol>
+              <li>
+                <div class="container55 d-flex align-items-stretch mb-5 mb-lg-0 swiper-slide">
+                  <img src="assets/img/img4.webp" class="img-fluid card-img-top">
+                  
+                    <span class="ism-caption ism-caption-1" style="font-family: 'Monoton', fantasy;border: 3px solid white; letter-spacing:8px;
+      "data-delay='200'>INTEGRATED <br>DESIGNS</span>
+                
+                </div>
+              </li>
+              <li>
+                <div class="container55 d-flex align-items-stretch mb-5 mb-lg-0 swiper-slide">
+                  <img src="assets/img/img2.webp" class="img-fluid card-img-top">
+                  <span class="ism-caption ism-caption-1" data-delay='200' style="border: 3px solid white;font-family: 'Monoton'; letter-spacing:8px;">MASS <br>PRODUCTION
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <div class="container55 d-flex align-items-stretch mb-5 mb-lg-0 swiper-slide">
+                  <img src="assets/img/img3.webp" class="img-fluid card-img-top">
+                  <span class="ism-caption ism-caption-1" style="font-family: 'Monoton', fantasy; letter-spacing:8px; border: 3px solid white; " data-delay='200'>CNC MACHINING <br>
+                      PROFESSIONALS
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <div class="container55 d-flex align-items-stretch mb-5 mb-lg-0 swiper-slide">
+                  <img src="assets/img/img1.webp" class=" img-carousel mw-100 mh-100">
+                  <span class="ism-caption ism-caption-1" data-delay='200' style="font-family: 'Monoton', fantasy; letter-spacing:8px; border: 3px solid white; "  >
+                      COMPLEX <br> MACHINRY
+                    </span>
+                </div>
+              </li>
+            </ol>
+          </div>
+          
+
+
+          <!--           
+           <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide to="0" class="active"></li>
             <li data-target="#carousel" data-slide to="1"></li>
             <li data-target="#carousel" data-slide to="2"></li>
             <li data-target="#carousel" data-slide to="3"></li>
-          </ol>
+          </ol> -->
 
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="assets/img/img1.webp" class="img-fluid">
-              <div class="carousel-caption d-none d-md-block">
-                <p class=" h1 text-center p-5 mb-2   text-warning "
-                  style="background-color: #0000004f;    margin:  0 05vh 0500vh 0;">CNC MACHINING PROFESSIONALS</p>
-              </div>
-            </div>
-            <div class="item">
+          <!-- <div class="carousel-inner"> -->
+          <!-- <div class="item active"> -->
+          <!-- <img src="assets/img/img1.webp" class="img-fluid" style="visibility:hidden;"> -->
+          <!-- <div class="carousel-caption d-none d-md-block">
+                <p class=" h1 text-center p-5 mb-2"
+                  style="font-family: 'Monoton', fantasy;font-size:51px; letter-spacing: 8px;background-color: #0000009A;    margin:  0 05vh 0500vh 0; border: 3px solid white;
+                  box-sizing: border-box;">CNC MACHINING <br> PROFESSIONALS</p> -->
+          <!-- </div> -->
+          <!-- </div> -->
+          <!-- <div class="item">
               <img src="assets/img/img2.webp" class="img-fluid">
               <div class="carousel-caption d-none d-md-block">
-                <p class=" h1 text-center p-5 mb-2   text-warning "
-                  style="background-color: #0000004f; margin:  0 05vh 0500vh 0;">COMPLEX MACHINRY</p>
+                <p class=" h1 text-center p-5 mb-2    "
+                  style="font-family: 'Monoton', fantasy;font-size:51px;letter-spacing: 8px; background-color: #0000009A; margin:  0 05vh 0500vh 0;border: 3px solid white;
+                  box-sizing: border-box;">COMPLEX <br> MACHINRY</p>
               </div>
             </div>
             <div class="item">
               <img src="assets/img/img3.webp" class="img-fluid">
               <div class="carousel-caption d-none d-md-block">
-                <p class=" h1 text-center p-5 mb-2   text-warning "
-                  style="background-color: #0000004f; margin:  0 05vh 0500vh 0;">MASS PRODUCTION</p>
-              </div>
+                <p class=" h1 text-center p-5 mb-2    "
+                  style="font-family: 'Monoton', fantasy;font-size:51px;letter-spacing: 8px; background-color: #0000009A; margin:  0 05vh 0500vh 0;border: 3px solid white;
+                  box-sizing: border-box;">MASS <br>PRODUCTION</p>
+              </div> 
             </div>
             <div class="item">
               <img src="assets/img/img4.webp" class="img-fluid">
               <div class="carousel-caption d-none d-md-block ">
-                <p class=" h1 text-center p-5 mb-2   text-warning " style="background-color: #0000004f; margin:  0 05vh 0500vh 0; padding: 5vw; content:'';
-                margin-left:calc(30% - 25%);     ">INTEGRATED DESIGNS</p>
+                <p class=" h1 text-center p-5 mb-2    " style="font-family: 'Monoton', fantasy;font-size:51px;letter-spacing: 8px; background-color: #0000009A; margin:  0 05vh 0500vh 0; padding: 5vw; content:'';
+                margin-left:calc(30% - 25%);border: 3px solid white;
+    box-sizing: border-box; ">INTEGRATED <br>DESIGNS</p>
               </div>
             </div>
-          </div>
-
-          <a class="carousel-control left" href="#carousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left glyphicon-user"
-              style="color:#edcd1f; font-size: 4vh;     margin: -6vh 0 0 0;"></span>
-          </a>
-          <a class="carousel-control right" href="#carousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right glyphicon-user"
-              style="    margin: -6vh 0 0 0;color:#edcd1f"></span>
-          </a>
-
+            
+            <a class="carousel-control left" href="#carousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left glyphicon-user"
+              style="color:#edcd1f; font-size: 4vh;     margin: -12vh 0 0 0;"></span>
+            </a>
+            <a class="carousel-control right" href="#carousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right glyphicon-user"
+              style="    margin: -12vh 0 0 0;color:#edcd1f"></span>
+            </a>   -->
         </div>
+      </div>
       </div>
 
 
+      </div>
+      
     </div>
+    <script type="text/javascript">
+
+      (function () {
+        function e(b, c) { this.selector = null; c ? this.nodes = c : "string" == typeof b ? (this.selector = b, this.nodes = document.querySelectorAll(b)) : this.nodes = [b]; this.length = this.nodes.length; this.el = this.nodes[0] } function d(b) { return new e(b) } function k(b, c) {
+          function l(a, c, d) {
+            a = a || {}; e(); !1 !== c && r(); N = n = f = null; p = -1; C = z = D = E = null; A = !1; B = null; F = !1; q = null; k(a); u(); S(f.transition_type, !0); n.find("#" + b + " .ism-caption").css("visibility", "hidden"); T(); ca(); x(f.play_type); da(); setTimeout(function () { !0 !== d && h() },
+              1E3)
+          } function e() { d("#" + b + "-ism-loading-mask").remove(); var a = document.createElement("DIV"); a.id = b + "-ism-loading-mask"; a.style.position = "absolute"; a.style.zIndex = 10; a.style.top = 0; a.style.bottom = 0; a.style.left = 0; a.style.right = 0; a.style.backgroundColor = "#eee"; d("#" + b).el.appendChild(a) } function h() { d("#" + b).show(); 1 == d("#" + b + "-ism-loading-mask").length && d("#" + b + "-ism-loading-mask").fadeOut(400, function () { d("#" + b + "-ism-loading-mask").remove(); O(0); U(0) }) } function k(a) {
+            for (var c in G) {
+              var g = typeof G[c];
+              void 0 == a[c] && "object" != g && (g = d("#" + b).data(c), void 0 != g && ("true" === g ? g = !0 : "false" === g && (g = !1), a[c] = g))
+            } f = a || {}; for (c in G) void 0 == f[c] && (f[c] = G[c]); f.captions = []; a = d("#" + b + " ol > li"); c = a.length; for (g = 0; g < c; g++) { f.captions[g] = []; for (var l = 0; 3 > l; l++) { var e = { enable: V[l].enable, delay: V[l].delay }, t = d(a.get(g)).find(".ism-caption-" + l); 1 == t.length && (e.enable = !0, t = t.data("delay"), isNaN(t) || (e.delay = parseInt(t))); f.captions[g][l] = e } }
+          } function r() {
+            g(); W(); q && q.unbindEventListeners(); X(); d("#" + b + " .ism-radios input.ism-radio, #" +
+              b + " .ism-radios .ism-radio-label").off("click", H); d("#" + b + " .ism-radios input.ism-radio, #" + b + " .ism-radios .ism-radio-label").off("touchstart", H); Y(); d("#" + b + " .ism-button").remove(); d("#" + b + " .ism-radios").remove(); d("#" + b + " .ism-cloned").remove(); for (d("#" + b + " .ism-tmp-clone").remove(); 0 < d("#" + b + " .ism-frame").length;)d("#" + b + " .ism-slides").unwrap(); 0 < d("#" + b + " .ism-img-frame").length && d("#" + b + " .ism-img").unwrap(); d("#" + b + " .ism-caption").removeAttr("style"); d("#" + b + " .ism-slide").show(); d("#" +
+                b + " .ism-slide").removeAttr("style"); d("#" + b + " .ism-slides").removeAttr("style"); d("#" + b + " .ism-img").removeClass("ism-img"); d("#" + b + " .ism-slide").removeClass("ism-slide ism-slide-0 ism-slide-1 ism-slide-2 ism-slide-3 ism-slide-4 ism-slide-5 ism-slide-6 ism-slide-7 ism-slide-8 ism-slide-9"); d("#" + b + " .ism-slides").removeClass("ism-slides"); d("#" + b).removeClass("active")
+          } function u() {
+            n = d("#" + b + " ol"); N = 100 / d("#" + b + " ol > li").length; p = 0; n.addClass("ism-slides"); d("#" + b + " .ism-slides > li").addClass("ism-slide");
+            d("#" + b + " .ism-slides > .ism-slide > img, #" + b + " .ism-slides > .ism-slide > a > img").addClass("ism-img"); n.find("li").each(function (a) { this.addClass("ism-slide-" + a) }); d("#" + b).wrapInner("<div class='ism-frame'></div>"); n = d("#" + b + " ol.ism-slides"); d("#" + b + " .ism-img").wrap("<div class='ism-img-frame'></div>")
+          } function m() { return d("#" + b + " .ism-slide").length } function x(a) {
+            f.play_type = a; Y(); d("#" + b + " .ism-pause-button").remove(); f.pause_button && "manual" != f.play_type && (n.after(),
+              C = d("#" + b + " .ism-pause-button"), C.on("click", I), C.on("touchstart", I)); v()
+          } function v() { A = !0; d("#" + b + " .ism-pause-button").removeClass("ism-play"); "manual" != f.play_type && (clearTimeout(B), B = setTimeout(a, f.interval)) } function a() { var a = p + 1; A && "manual" != f.play_type && ("once" == f.play_type && p == m() - 2 ? (y(a), g()) : "once-rewind" == f.play_type && p == m() - 1 ? (y(0), g()) : ("loop" == f.play_type && p == m() - 1 ? y(0) : y(a), v())) } function g() { A = !1; clearTimeout(B); B = null; d("#" + b + " .ism-pause-button").addClass("ism-play") } function t(a,
+            b) { a != p && (g(), y(a, b)) } function T() { f.buttons && (n.after("<div class='ism-button ism-button-prev'>&nbsp;</div><div class='ism-button ism-button-next'>&nbsp;</div>"), E = d("#" + b + " .ism-button-prev"), D = d("#" + b + " .ism-button-next"), E.on("click", J), E.on("touchstart", J), D.on("click", K), D.on("touchstart", K)) } function X() { d("#" + b + " .ism-button-prev").off("click", J); d("#" + b + " .ism-button-prev").off("touchstart", J); d("#" + b + " .ism-button-next").off("click", K); d("#" + b + " .ism-button-next").off("touchstart", K) } function J(a) {
+              a &&
+                a.preventDefault && a.preventDefault(); a && a.stopPropagation && a.stopPropagation(); t(p - 1)
+            } function K(a) { a && a.preventDefault && a.preventDefault(); a && a.stopPropagation && a.stopPropagation(); t(p + 1) } function ca() {
+              if (f.radios) {
+                d("#" + b).append("<ul class='ism-radios'></ul>"); z = d("#" + b + " .ism-radios"); "thumbnail" == f.radio_type && z.addClass("ism-radios-as-thumbnails"); for (var a = 0; a < m(); a++)0 == a ? z.append("<li class='ism-radio-" + a + " active'><input type='radio' name='ism-radio' class='ism-radio' id='ism-radio-" + a +
+                  "' checked='checked' /><label class='ism-radio-label' for='ism-radio-" + a + "'></label></li>") : z.append("<li class='ism-radio-" + a + "'><input type='radio' name='ism-radio' class='ism-radio' id='ism-radio-" + a + "' /><label class='ism-radio-label' for='ism-radio-" + a + "'></label></li>"); d("#" + b + " .ism-radios input.ism-radio, #" + b + " .ism-radios .ism-radio-label").on("click", H); d("#" + b + " .ism-radios input.ism-radio, #" + b + " .ism-radios .ism-radio-label").on("touchstart", H)
+              }
+            } function H(a) {
+              a.preventDefault && a.preventDefault();
+              a.stopPropagation && a.stopPropagation(); a = d(a.target.parentNode).index(); t(a)
+            } function Z(a) { f.radios && (d("#" + b + " .ism-radios li").removeClass("active"), a = d("#" + b + " .ism-radios li").get(a), d(a).addClass("active"), d(a).find("input").attr("checked", "checked")) } function Y() { d("#" + b + " .ism-pause-button").off("click", I); d("#" + b + " .ism-pause-button").off("touchstart", I) } function I(a) { a.preventDefault(); a.stopPropagation(); A ? g() : v() } function da() {
+              var a = d("#" + b).get(0), c = n.get(0); q = new Dragdealer(a, c, {
+                steps: m(),
+                x: 0, speed: .2, loose: !0, requestAnimationFrame: !0, dragStartCallback: function () { g() }, dragStopCallback: function (a, b) { new_slide_index = q.getStep()[0] - 1; f.pause_button ? g() : v(); var c = new_slide_index, d = p; p = c; P("afterswipe", [c]); Z(c); L(d, c, !1) }, onAfterGlide: function () { q.setStep(p + 1, 1, !0) }
+              }); window.onload = function () { setTimeout(function () { q.reflow() }, 150); setTimeout(function () { q.reflow() }, 600) }
+            } function aa() { q && (q.setStep(p + 1, 1, !0), q.reflow()) } function P(a, b) { Q[a] && Q[a].apply(this, b) } function S(a, c) {
+              if (1 == c ||
+                a != f.transition_type) { f.transition_type = a; d("#" + b + " .ism-slide").removeClass("ism-zoom-in"); d("#" + b + " .ism-slide").show(); var g = m(); n.css("width", 100 * g + "%"); n.find(".ism-slide").each(function (a) { a = N * a + "%"; this.css("width", 100 / g + "%"); this.css("left", a) }) }
+            } function y(a, b) {
+              if (!0 !== F && a != p) {
+                F = !0; var c = p; a = parseInt(a); 0 > a ? a = m() - 1 : a >= m() && (a = 0); var g = a; Z(g); p = g; P("beforetransition", [g]); "instant" == f.transition_type ? (g = a, q.setStep(g + 1, 1, !0), L(c, g, !0, b)) : "slide" == f.transition_type ? ea(c, a, b) : "fade" == f.transition_type ?
+                  ba(c, a, !1, b) : "zoom" == f.transition_type && ba(c, a, !0, b)
+              }
+            } function ea(a, b, c) { var g = b / (m() - 1); q.startSlide(g, function () { L(a, b, !0, c) }) } function ba(a, c, g, l) {
+              d("#" + b + " li.ism-slide").removeClass("ism-zoom-in"); var t = d("#" + b + " li.ism-slide-" + a), e = n.clone(); e.addClass("ism-slides-clone"); var h = c / (m() - 1), h = q.getOffsetsByRatios([h, 0]); e.css("transform", "translateX(" + h[0] + "px)"); e.insertAfter(n.el); g && t.addClass("ism-zoom-in"); g = e.get(0); n.fadeInto(g, 2 * f.transition_duration, function () {
+                q.setStep(c + 1, 1, !0); d("#" +
+                  b + " .ism-slides-clone").remove(); d("#" + b + " .ism-slides").show(); d("#" + b + " .ism-slides").css("opacity", null); L(a, c, !0, l)
+              })
+            } function L(a, c, g, l) { c = parseInt(c); d("#" + b + " .ism-slides-clone").remove(); d("#" + b + " .ism-slides").show(); d("#" + b + " li.ism-slide").removeClass("ism-zoom-in"); g && aa(); l && l(); O(c); U(c); F = !1; P("aftertransition", [c]) } function O(a) {
+              W(); "none" != f.image_fx && ("zoompan" == f.image_fx ? d("#" + b + " .ism-slide-" + a + " .ism-img-frame").addClass("ism-zoom-pan") : "zoomrotate" == f.image_fx && d("#" + b + " .ism-slide-" +
+                a + " .ism-img-frame").addClass("ism-zoom-rotate"))
+            } function W() { d("#" + b + " .ism-slide .ism-img-frame").removeClass("ism-zoom-pan"); d("#" + b + " .ism-slide .ism-img-frame").removeClass("ism-zoom-rotate") } function U(a) { n.find(".ism-caption").css("visibility", "hidden"); n.find(".ism-caption").removeClass("ism-caption-anim"); R(a, 0); R(a, 1); R(a, 2) } function R(a, b) {
+              f.captions[a] && 1 == f.captions[a][b].enable && setTimeout(function () {
+                n.find(".ism-slide-" + a + " .ism-caption-" + b).css("visibility", "visible"); n.find(".ism-slide-" +
+                  a + " .ism-caption-" + b).addClass("ism-caption-anim")
+              }, f.captions[a][b].delay)
+            } var G = { transition_type: "slide", play_type: "manual", interval: 7E3, image_fx: "none", buttons: !0, radios: !0, radio_type: "button", pause_button: !0, transition_duration: 350, swipe: !0 }, V = [{ enable: !1, delay: 0 }, { enable: !1, delay: 200 }, { enable: !1, delay: 400 }], f, n, N, p, E, D, z, C, A, B, F, q, Q = {}; l(c, !1, c.prevent_stop_loading || !1); this.init = l; this.deinit = r; this.stopLoading = h; this.transition = y; this.listen = function (a, b) { Q[a] = b }; this.reflow = aa; this.setTransitionType =
+              S; this.setPlayType = x; this.setInterval = function (a) { f.interval = a }; this.setImageFx = function (a) { a != f.image_fx ? (f.image_fx = a, O(p)) : f.image_fx = a }; this.setCaptionEnable = function (a, b, c) { f.captions[a][b].enable = c }; this.setCaptionDelay = function (a, b, c) { f.captions[a][b].delay = c }; this.enableButtons = function (a) { !0 !== a || f.buttons || (X(), d("#" + b + " .ism-button").remove(), T()) }; this.enableRadios = function (a) { }; this.setRadioType = function (a) {
+                "thumbnail" == a ? d("#" + b + " .ism-radios").addClass("ism-radios-as-thumbnails") : d("#" +
+                  b + " .ism-radios").removeClass("ism-radios-as-thumbnails")
+              }; this.getSlideCount = m; this.getActiveSlideIndex = function () { return p }; this.setElementId = function (a) { b = document.getElementById(b).id = a }
+        } e.prototype.get = function (b) { return this.nodes[b] }; e.prototype.find = function (b) { b = this.el.querySelectorAll(b); return new e(null, b) }; e.prototype.index = function () { for (var b = this.el, c = 0; null != (b = b.previousSibling);)c++; return c }; e.prototype.each = function (b) {
+          for (var c = 0; c < this.nodes.length; c++) {
+            var d = new e(this.nodes[c]);
+            b.call(d, c, d)
+          }
+        }; e.prototype.remove = function () { for (var b = 0; b < this.nodes.length; b++) { var c = this.nodes[b]; c.parentNode.removeChild(c) } }; e.prototype.removeAttr = function (b) { for (var c = 0; c < this.nodes.length; c++)this.nodes[c].removeAttribute(b) }; e.prototype.attr = function (b, c) { var d = this.el; if (void 0 != c) d.setAttribute(b, c); else return d.getAttribute(b) }; e.prototype.data = function (b) { return this.el.getAttribute("data-" + b) }; e.prototype.hasClass = function (b) {
+          var c = this.el; return c.classList ? c.classList.contains(b) :
+            (new RegExp("(^| )" + b + "( |$)", "gi")).test(c.className)
+        }; e.prototype.addClass = function (b) { for (var c = 0; c < this.nodes.length; c++) { var d = this.nodes[c]; d.classList ? d.classList.add(b) : d.className += " " + b } }; e.prototype.removeClass = function (b) { for (var c = 0; c < this.nodes.length; c++) { var d = this.nodes[c]; d.classList ? d.classList.remove(b.split(" ")) : d.className = d.className.replace(new RegExp("(^|\\b)" + b.split(" ").join("|") + "(\\b|$)", "gi"), " ") } }; e.prototype.show = function () {
+          for (var b = 0; b < this.nodes.length; b++) {
+            var c =
+              this.nodes[b]; c && c.style && (c.style.display = "")
+          }
+        }; e.prototype.hide = function () { for (var b = 0; b < this.nodes.length; b++) { var c = this.el; c && c.style && (c.style.display = "none") } }; e.prototype.css = function (b, c) { for (var d = 0; d < this.nodes.length; d++)this.nodes[d].style[b] = c }; e.prototype.fadeOut = function (b, c) { e.crossFade(this.el, null, b, c) }; e.prototype.fadeIn = function (b, c) { e.crossFade(null, this.el, b, c) }; e.prototype.fadeInto = function (b, c, d) { e.crossFade(this.el, b, c, d) }; e.crossFade = function (b, c, d, e) {
+          b = b || { style: {} }; c =
+            c || { style: {} }; d = d || 400; var h = 1, k = 0; b.style.opacity = h; c.style.opacity = k; b.style.filter = ""; c.style.filter = ""; var r = +new Date, u, m = function () { u = (new Date - r) / d; h -= u; k += u; b.style.opacity = h; c.style.opacity = k; b.style.filter = "alpha(opacity=" + 100 * h | NaN; c.style.filter = "alpha(opacity=" + 100 * k | NaN; r = +new Date; 0 < h ? window.requestAnimationFrame && requestAnimationFrame(m) || setTimeout(m, 16) : (b.style.opacity = 0, c.style.opacity = 1, b.style.filter = "", c.style.filter = "", e && e()) }; m()
+        }; e.prototype.wrap = function (b) {
+          for (var c = 0; c <
+            this.nodes.length; c++) { var d = this.nodes[c], k = (new e(d)).index(), h = d.outerHTML, w = d.parentNode; d.insertAdjacentHTML("beforebegin", b); w.removeChild(d); w.childNodes[k].innerHTML = h }
+        }; e.prototype.wrapInner = function (b) { var c = this.el, d = c.innerHTML; c.innerHTML = b; c.firstChild.innerHTML = d }; e.prototype.unwrap = function () { var b = this.el; b.parentNode.outerHTML = b.parentNode.innerHTML }; e.prototype.after = function (b) { this.el.insertAdjacentHTML("afterend", b) }; e.prototype.append = function (b) {
+          this.el.insertAdjacentHTML("beforeend",
+            b)
+        }; e.prototype.insertAfter = function (b) { b.parentNode.insertBefore(this.el, b.nextSibling) }; e.prototype.clone = function () { return new e(this.el.cloneNode(!0)) }; e.prototype.on = function (b, c) { for (var d = 0; d < this.nodes.length; d++) { var e = this.nodes[d]; e.addEventListener ? e.addEventListener(b, c) : e.attachEvent("on" + b, function () { c.call(e) }) } }; e.prototype.off = function (b, c) { for (var d = 0; d < this.nodes.length; d++) { var e = this.nodes[d]; e && (e.removeEventListener ? e.removeEventListener(b, c) : e.detachEvent("on" + b, c)) } }; d.ready =
+          function (b) { "complete" === document.readyState ? setTimeout(b, 1) : document.addEventListener ? document.addEventListener("DOMContentLoaded", b, !1) : document.attachEvent("onreadystatechange", function () { "complete" === document.readyState && b() }) }; window.ISM = window.ISM || {}; window.ISM.Slider = k; window.ISM.Config = window.ISM.Config || {}; window.ISM.instances = []; d.ready(function () {
+            if (!0 !== window.ISM.Config.no_instantiation) for (var b = d(".ism-slider"), c = 0; c < b.length; c++) {
+              var e = b.get(c); e.id = e.id || "ism-slider-" + c; window.ISM.instances.push(new k(e.id,
+                {}))
+            }
+          })
+      })();
+      (function (e, d) { "function" === typeof define && define.amd ? define(d) : e.Dragdealer = d() })(this, function () {
+        function e(a) { var b = ["Webkit", "Moz", "ms", "O"], c = document.documentElement.style; if (void 0 !== c[a]) return a; a = a.charAt(0).toUpperCase() + a.substr(1); for (var d = 0; d < b.length; d++)if (void 0 !== c[b[d] + a]) return b[d] + a } var d = function (a, b, c) { this.options = this.applyDefaults(c || {}); this.bindMethods(); this.wrapper = a; this.handle = b; this.init(); this.bindEventListeners() }; d.prototype = {
+          defaults: {
+            disabled: !1, horizontal: !0,
+            vertical: !1, slide: !0, steps: 0, snap: !1, loose: !1, speed: .1, xPrecision: 0, yPrecision: 0, activeClass: "active", css3: !0, tapping: !0, afterSwipeCallback: function () { }
+          }, init: function () {
+            if (this.options.css3) { var a = this.handle; r.backfaceVisibility && r.perspective && (a.style[r.perspective] = "1000px", a.style[r.backfaceVisibility] = "hidden") } this.value = { prev: [-1, -1], current: [this.options.x || 0, this.options.y || 0], target: [this.options.x || 0, this.options.y || 0] }; this.offset = {
+              wrapper: [0, 0], mouse: [0, 0], prev: [-999999, -999999], current: [0,
+                0], target: [0, 0]
+            }; this.change = [0, 0]; this.stepRatios = this.calculateStepRatios(); this.sliding = this.tapping = this.dragging = this.activity = !1; this.slide_count = 0; this.reflow(); this.options.disabled && this.disable()
+          }, applyDefaults: function (a) { for (var b in this.defaults) a.hasOwnProperty(b) || (a[b] = this.defaults[b]); return a }, calculateStepRatios: function () { var a = []; if (1 <= this.options.steps) for (var b = 0; b <= this.options.steps - 1; b++)a[b] = 1 < this.options.steps ? b / (this.options.steps - 1) : 0; return a }, setWrapperOffset: function () {
+            this.offset.wrapper =
+              w.get(this.wrapper)
+          }, calculateBounds: function () { var a = { top: this.options.top || 0, bottom: -(this.options.bottom || 0) + this.wrapper.offsetHeight, left: this.options.left || 0, right: -(this.options.right || 0) + this.wrapper.offsetWidth }; a.availWidth = a.right - a.left - this.handle.offsetWidth; a.availHeight = a.bottom - a.top - this.handle.offsetHeight; return a }, calculateValuePrecision: function () {
+            var a = this.options.xPrecision || Math.abs(this.bounds.availWidth), b = this.options.yPrecision || Math.abs(this.bounds.availHeight); return [a ?
+              1 / a : 0, b ? 1 / b : 0]
+          }, bindMethods: function () {
+            this.requestAnimationFrame = "function" === typeof this.options.customRequestAnimationFrame ? k(this.options.customRequestAnimationFrame, window) : k(m, window); this.cancelAnimationFrame = "function" === typeof this.options.customCancelAnimationFrame ? k(this.options.customCancelAnimationFrame, window) : k(x, window); this.animateWithRequestAnimationFrame = k(this.animateWithRequestAnimationFrame, this); this.animate = k(this.animate, this); this.onHandleMouseDown = k(this.onHandleMouseDown,
+              this); this.onHandleTouchStart = k(this.onHandleTouchStart, this); this.onDocumentMouseMove = k(this.onDocumentMouseMove, this); this.onWrapperTouchMove = k(this.onWrapperTouchMove, this); this.onWrapperMouseDown = k(this.onWrapperMouseDown, this); this.onWrapperTouchStart = k(this.onWrapperTouchStart, this); this.onDocumentMouseUp = k(this.onDocumentMouseUp, this); this.onDocumentTouchEnd = k(this.onDocumentTouchEnd, this); this.onHandleClick = k(this.onHandleClick, this); this.onWindowResize = k(this.onWindowResize, this)
+          }, bindEventListeners: function () {
+            b(this.handle,
+              "mousedown", this.onHandleMouseDown); b(this.handle, "touchstart", this.onHandleTouchStart); b(document, "mousemove", this.onDocumentMouseMove); b(this.wrapper, "touchmove", this.onWrapperTouchMove); b(this.wrapper, "mousedown", this.onWrapperMouseDown); b(this.wrapper, "touchstart", this.onWrapperTouchStart); b(document, "mouseup", this.onDocumentMouseUp); b(document, "touchend", this.onDocumentTouchEnd); b(this.handle, "click", this.onHandleClick); b(window, "resize", this.onWindowResize); this.animate(!1, !0); this.interval =
+                this.requestAnimationFrame(this.animateWithRequestAnimationFrame)
+          }, unbindEventListeners: function () {
+            c(this.handle, "mousedown", this.onHandleMouseDown); c(this.handle, "touchstart", this.onHandleTouchStart); c(document, "mousemove", this.onDocumentMouseMove); c(this.wrapper, "touchmove", this.onWrapperTouchMove); c(this.wrapper, "mousedown", this.onWrapperMouseDown); c(this.wrapper, "touchstart", this.onWrapperTouchStart); c(document, "mouseup", this.onDocumentMouseUp); c(document, "touchend", this.onDocumentTouchEnd); c(this.handle,
+              "click", this.onHandleClick); c(window, "resize", this.onWindowResize); this.cancelAnimationFrame(this.interval)
+          }, onHandleMouseDown: function (a) { a.target && "A" == a.target.tagName && 0 <= a.target.className.search(/ism-caption/) && (document.location = a.target.href); h.refresh(a); l(a); M(a); this.activity = !1; this.startDrag() }, onHandleTouchStart: function (a) { a.target && "A" == a.target.tagName && 0 <= a.target.className.search(/ism-caption/) && (document.location = a.target.href); h.refresh(a); M(a); this.activity = !1; this.startDrag() },
+          onDocumentMouseMove: function (a) { h.refresh(a); this.dragging && (this.activity = !0, l(a)) }, onWrapperTouchMove: function (a) { h.refresh(a); !this.activity && this.draggingOnDisabledAxis() ? this.dragging && this.stopDrag() : (l(a), this.activity = !0) }, onWrapperMouseDown: function (a) { a.target && 0 <= a.target.className.search(/ism-(button|radio|caption)/) || (h.refresh(a), l(a), this.startTap()) }, onWrapperTouchStart: function (a) { h.refresh(a); l(a); this.startTap() }, onDocumentMouseUp: function (a) {
+            this.stopDrag(); this.stopTap(); a.target &&
+              0 <= a.target.className.search(/ism-(button|radio|caption)/) || this.options.afterSwipeCallback()
+          }, onDocumentTouchEnd: function (a) { this.stopDrag(); this.stopTap(); this.options.afterSwipeCallback() }, onHandleClick: function (a) { a.target && 0 <= a.target.className.search(/ism-(button|radio)/) || !this.activity || (l(a), M(a)) }, onWindowResize: function (a) { this.reflow() }, enable: function () { this.disabled = !1; this.handle.className = this.handle.className.replace(/\s?disabled/g, "") }, disable: function () {
+            this.disabled = !0; this.handle.className +=
+              " disabled"
+          }, reflow: function () { this.setWrapperOffset(); this.bounds = this.calculateBounds(); this.valuePrecision = this.calculateValuePrecision(); this.updateOffsetFromValue() }, getStep: function () { return [this.getStepNumber(this.value.target[0]), this.getStepNumber(this.value.target[1])] }, getValue: function () { return this.value.target }, setStep: function (a, b, c) { this.setValue(this.options.steps && 1 < a ? (a - 1) / (this.options.steps - 1) : 0, this.options.steps && 1 < b ? (b - 1) / (this.options.steps - 1) : 0, c) }, setValue: function (a, b,
+            c) { this.setTargetValue([a, b || 0]); c && (this.groupCopy(this.value.current, this.value.target), this.updateOffsetFromValue(), this.callAnimationCallback()) }, startTap: function () { !this.disabled && this.options.tapping && (this.tapping = !0, this.setWrapperOffset(), this.setTargetValueByOffset([h.x - this.offset.wrapper[0] - this.handle.offsetWidth / 2, h.y - this.offset.wrapper[1] - this.handle.offsetHeight / 2])) }, stopTap: function () { !this.disabled && this.tapping && (this.tapping = !1, this.setTargetValue(this.value.current)) }, startDrag: function () {
+              this.disabled ||
+                (this.dragging = !0, this.interval = this.requestAnimationFrame(this.animateWithRequestAnimationFrame), this.setWrapperOffset(), this.offset.mouse = [h.x - w.get(this.handle)[0], h.y - w.get(this.handle)[1]], this.wrapper.className.match(this.options.activeClass) || (this.wrapper.className += " " + this.options.activeClass), this.callDragStartCallback())
+            }, stopDrag: function () {
+              if (!this.disabled && this.dragging) {
+                this.dragging = !1; var a = this.groupClone(this.value.current); if (this.options.slide) {
+                  var b = this.change; a[0] += 4 * b[0];
+                  a[1] += 4 * b[1]
+                } this.setTargetValue(a); this.wrapper.className = this.wrapper.className.replace(" " + this.options.activeClass, ""); this.callDragStopCallback()
+              }
+            }, callAnimationCallback: function () { var a = this.value.current; this.options.snap && 1 < this.options.steps && (a = this.getClosestSteps(a)); this.groupCompare(a, this.value.prev) || ("function" == typeof this.options.animationCallback && this.options.animationCallback.call(this, a[0], a[1]), this.groupCopy(this.value.prev, a)) }, callTargetCallback: function () {
+              "function" == typeof this.options.callback &&
+                this.options.callback.call(this, this.value.target[0], this.value.target[1])
+            }, callDragStartCallback: function () { "function" == typeof this.options.dragStartCallback && this.options.dragStartCallback.call(this, this.value.target[0], this.value.target[1]) }, callDragStopCallback: function () { "function" == typeof this.options.dragStopCallback && this.options.dragStopCallback.call(this, this.value.target[0], this.value.target[1]) }, startSlide: function (a, b) {
+              this.slide_callback = b; this.sliding = !0; this.value.target[0] = a; this.slide_start =
+                this.value.current[0]; this.step_size = Math.abs(this.value.target[0] - this.value.current[0]); this.interval = this.requestAnimationFrame(this.animateWithRequestAnimationFrame)
+            }, animateWithRequestAnimationFrame: function (a) {
+              a ? (this.timeOffset = this.timeStamp ? a - this.timeStamp : 0, this.timeStamp = a) : this.timeOffset = 25; this.sliding ? this.animateSlide() : this.animate(); if (this.sliding || this.dragging || this.value.target[0] != this.value.current[0]) this.interval = this.requestAnimationFrame(this.animateWithRequestAnimationFrame);
+              else this.options.onAfterGlide()
+            }, animate: function (a, b) { if (!a || this.dragging) { if (this.dragging) { var c = this.groupClone(this.value.target); this.setTargetValueByOffset([h.x - this.offset.wrapper[0] - this.offset.mouse[0], h.y - this.offset.wrapper[1] - this.offset.mouse[1]], this.options.loose); this.change = [this.value.target[0] - c[0], this.value.target[1] - c[1]] } (this.dragging || b) && this.groupCopy(this.value.current, this.value.target); if (this.dragging || this.glide() || b) this.updateOffsetFromValue(), this.callAnimationCallback() } },
+          glide: function () { var a = [this.value.target[0] - this.value.current[0], this.value.target[1] - this.value.current[1]]; if (!a[0] && !a[1]) return !1; Math.abs(a[0]) > this.valuePrecision[0] || Math.abs(a[1]) > this.valuePrecision[1] ? (this.value.current[0] += a[0] * Math.min(this.options.speed * this.timeOffset / 25, 1), this.value.current[1] += a[1] * Math.min(this.options.speed * this.timeOffset / 25, 1)) : this.groupCopy(this.value.current, this.value.target); return !0 }, animateSlide: function () {
+            for (var a = this.value.target[0] - this.value.current[0],
+              b = 0 <= a ? 1 : -1, a = Math.abs(a), c = (this.value.current[0] - this.slide_start) / (this.value.target[0] - this.slide_start), d = c - .5, d = (-3 * d * d + .8) * this.step_size * .08; d > a;)d *= .5; .995 < c ? (this.groupCopy(this.value.current, this.value.target), this.sliding = !1, this.slide_callback()) : this.value.current[0] += b * d; this.updateOffsetFromValue(); this.renderHandlePosition(); isNaN(c)
+          }, updateOffsetFromValue: function () {
+            this.offset.current = this.options.snap ? this.getOffsetsByRatios(this.getClosestSteps(this.value.current)) : this.getOffsetsByRatios(this.value.current);
+            this.groupCompare(this.offset.current, this.offset.prev) || (this.renderHandlePosition(), this.groupCopy(this.offset.prev, this.offset.current))
+          }, renderHandlePosition: function () { var a = ""; this.options.css3 && r.transform ? (this.options.horizontal && (a += "translateX(" + this.offset.current[0] + "px)"), this.handle.style[r.transform] = a) : this.options.horizontal && (this.handle.style.left = this.offset.current[0] + "px") }, setTargetValue: function (a, b) {
+            var c = b ? this.getLooseValue(a) : this.getProperValue(a); this.groupCopy(this.value.target,
+              c); this.offset.target = this.getOffsetsByRatios(c); this.callTargetCallback()
+          }, setTargetValueByOffset: function (a, b) { var c = this.getRatiosByOffsets(a), c = b ? this.getLooseValue(c) : this.getProperValue(c); this.groupCopy(this.value.target, c); this.offset.target = this.getOffsetsByRatios(c) }, getLooseValue: function (a) { var b = this.getProperValue(a); return [b[0] + (a[0] - b[0]) / 4, b[1] + (a[1] - b[1]) / 4] }, getProperValue: function (a) {
+            a = this.groupClone(a); a[0] = Math.max(a[0], 0); a[1] = Math.max(a[1], 0); a[0] = Math.min(a[0], 1); a[1] = Math.min(a[1],
+              1); (!this.dragging && !this.tapping || this.options.snap) && 1 < this.options.steps && (a = this.getClosestSteps(a)); return a
+          }, getRatiosByOffsets: function (a) { return [this.getRatioByOffset(a[0], this.bounds.availWidth, this.bounds.left), this.getRatioByOffset(a[1], this.bounds.availHeight, this.bounds.top)] }, getRatioByOffset: function (a, b, c) { return b ? (a - c) / b : 0 }, getOffsetsByRatios: function (a) {
+            return [this.getOffsetByRatio(a[0], this.bounds.availWidth, this.bounds.left), this.getOffsetByRatio(a[1], this.bounds.availHeight,
+              this.bounds.top)]
+          }, getOffsetByRatio: function (a, b, c) { return Math.round(a * b) + c }, getStepNumber: function (a) { return this.getClosestStep(a) * (this.options.steps - 1) + 1 }, getClosestSteps: function (a) { return [this.getClosestStep(a[0]), this.getClosestStep(a[1])] }, getClosestStep: function (a) { for (var b = 0, c = 1, d = 0; d <= this.options.steps - 1; d++)Math.abs(this.stepRatios[d] - a) < c && (c = Math.abs(this.stepRatios[d] - a), b = d); return this.stepRatios[b] }, groupCompare: function (a, b) { return a[0] == b[0] && a[1] == b[1] }, groupCopy: function (a,
+            b) { a[0] = b[0]; a[1] = b[1] }, groupClone: function (a) { return [a[0], a[1]] }, draggingOnDisabledAxis: function () { return !this.options.horizontal && h.xDiff > h.yDiff || !this.options.vertical && h.yDiff > h.xDiff }
+        }; for (var k = function (a, b) { return function () { return a.apply(b, arguments) } }, b = function (a, b, c) { a.addEventListener ? a.addEventListener(b, c, !1) : a.attachEvent && a.attachEvent("on" + b, c) }, c = function (a, b, c) { a.removeEventListener ? a.removeEventListener(b, c, !1) : a.detachEvent && a.detachEvent("on" + b, c) }, l = function (a) {
+          a || (a = window.event);
+          a.preventDefault && a.preventDefault(); a.returnValue = !1
+        }, M = function (a) { a || (a = window.event); a.stopPropagation && a.stopPropagation(); a.cancelBubble = !0 }, h = {
+          x: 0, y: 0, xDiff: 0, yDiff: 0, refresh: function (a) { a || (a = window.event); "mousemove" == a.type ? this.set(a) : a.touches && this.set(a.touches[0]) }, set: function (a) {
+            var b = this.x, c = this.y; if (a.clientX || a.clientY) this.x = a.clientX, this.y = a.clientY; else if (a.pageX || a.pageY) this.x = a.pageX - document.body.scrollLeft - document.documentElement.scrollLeft, this.y = a.pageY - document.body.scrollTop -
+              document.documentElement.scrollTop; this.xDiff = Math.abs(this.x - b); this.yDiff = Math.abs(this.y - c)
+          }
+        }, w = { get: function (a) { var b = { left: 0, top: 0 }; void 0 !== a.getBoundingClientRect && (b = a.getBoundingClientRect()); return [b.left, b.top] } }, r = { transform: e("transform"), perspective: e("perspective"), backfaceVisibility: e("backfaceVisibility") }, u = ["webkit", "moz"], m = window.requestAnimationFrame, x = window.cancelAnimationFrame, v = 0; v < u.length && !m; ++v)m = window[u[v] + "RequestAnimationFrame"], x = window[u[v] + "CancelAnimationFrame"] ||
+          window[u[v] + "CancelRequestAnimationFrame"]; m || (m = function (a) { return setTimeout(a, 25) }, x = clearTimeout); return d
+      });
+
+    </script>
+
+    </div>
+
   </section><!-- End Hero -->
 
   <main id="main">
@@ -156,40 +808,52 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>BASICS</h2>
+          <section id="counts" class="clients section-bg">
+
+            <h2>BASICS</h2>
+          </section>
 
         </div>
 
         <div class="row icon-boxes">
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
             data-aos-delay="200">
-            <div class="icon-box">
+            <div class="icon-box" style="background-color: #F7F7F7;">
               <img src="assets/img/img11.webp" class="card-img-top" alt="Professional Designs">
-              <h4 class="title" style="margin: 4vh 0 0 0 ; "><a href="">Professional Designs</a></h4>
-              <p class="description">Using the latest CAD software, our professional designers produce high-quality CAD
-                models that accurately reflect the original customer's requirements.</p>
+              <div class="align-items-stretch" style="padding:0 0 0 15px;">
+                <h4 class="title" style="margin: 4vh 0 0 1vw ; "><a href="">Professional Designs</a></h4>
+                <p class="description" style="margin: 4vh 2vw 0 1vw ; ">Using the latest CAD software, our professional
+                  designers produce high-quality CAD
+                  models that accurately reflect the original customer's requirements.</p>
+              </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
             data-aos-delay="300">
-            <div class="icon-box">
+            <div class="icon-box" style="background-color: #F7F7F7;">
               <img src="assets/img/img-7.webp" class="card-img-top" alt="Skilled Operations">
-              <h4 class="title" style="margin: 4vh 0 0 0 ; "><a href="">Skilled Operations</a></h4>
-              <p class="description">With an integrated configuration of heavy-duty 4-axis milling, 7 axis Swiss-Type
-                turning, and 4-axis EDM machines, our skilled operators carry out efficient and well-planned machining
-                operations.</p>
+              <div class="align-items-stretch" style="padding:0 0 50px 15px;">
+                <h4 class="title" style="margin: 4vh 0 0 1vw ; "><a href="">Skilled Operations</a></h4>
+                <p class="description" style="margin: 4vh 2vw 0 1vw ; ">With an integrated configuration of heavy-duty
+                  4-axis milling, 7 axis Swiss-Type
+                  turning, and 4-axis EDM machines, our skilled operators carry out efficient and well-planned machining
+                  operations.</p>
+              </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in"
             data-aos-delay="400">
-            <div class="icon-box">
+            <div class="icon-box" style="background-color: #F7F7F7;">
               <img src="assets/img/img-8.webp" class="card-img-top" alt="Accurate Finish">
-              <h4 class="title" style="margin: 4vh 0 0 0 ; "><a href="">Accurate Finish</a></h4>
-              <p class="description">By virtue of a variety of accurate measuring equipment, we verify our products to
-                ensure their compatibility with the original customer's requirements, and that all measurements lie
-                within accepted tolerances.</p>
+              <div class="align-items-stretch" style="padding:0 0 0 15px;">
+                <h4 class="title" style="margin: 4vh 0 0 1vw ; "><a href="">Accurate Finish</a></h4>
+                <p class="description" style="margin: 4vh 2vw 0 1vw ; ">By virtue of a variety of accurate measuring
+                  equipment, we verify our products to
+                  ensure their compatibility with the original customer's requirements, and that all measurements lie
+                  within accepted tolerances.</p>
+              </div>
             </div>
           </div>
 
@@ -197,879 +861,879 @@
     </section><!-- End About Section -->
 
 
-    <section id="counts" class="counts section-bg">
 
-    </section><!-- End Counts Section -->
 
     <!-- ======= About Video Section ======= -->
-    <section id="PRODUCTS" class="about-video ">
+    <section id="PRODUCTS" class="portfolio" style="background-color: #F7F7F7;">
       <div class="container" data-aos="fade-up">
 
 
         <div class="section-title">
-          <h2>PRODUCTS</h2>
+
+          <section id="counts" class="clients section-bg">
+            <h2>PRODUCTS</h2>
+          </section>
 
         </div>
 
-        <!-- <div class="container1">
-          <div class="carousel1">
-            <div class="carousel__face1"><span><img src="assets/img/img-0.png" alt=""></span></div>
-            <div class="carousel__face1"><span><img src="assets/img/img-1.png" alt=""></span></div>
-            <div class="carousel__face1"><span><img src="assets/img/img-2.png" alt=""></span></div>
-            <div class="carousel__face1"><span><img src="assets/img/img-3.png" alt=""></span></div>
-            <div class="carousel__face1"><span><img src="assets/img/img-4.png" alt=""></span></div>
-            <div class="carousel__face1"><span><img src="assets/img/img-5.png" alt=""></span></div>
 
+        <!-- <section>
+          <div class="slider slider_circle_10">
+            <div><img src="assets/img/img-0.png"></div>
+            <div><img src="assets/img/img-1.png"></div>
+            <div><img src="assets/img/img-2.png"></div>
+            <div><img src="assets/img/img-3.png"></div>
+            <div><img src="assets/img/img-4.png"></div>
+            <div><img src="assets/img/img-5.png"></div>
+            <div><img src="assets/img/img-14.png"></div>
+            <div><img src="assets/img/img-11.png"></div>
+            <div><img src="assets/img/img-10.png"></div>
+            <div><img src="assets/img/img-15.png"></div>
+            <div><img src="assets/img/img-16.png"></div>
+            <div><img src="assets/img/img-17.png"></div>
+            <div><img src="assets/img/img-18.png"></div>
+            <div class="next_button"></div>
+            <div class="prev_button"></div>
           </div>
-        </div> -->
+          <script>
+            $(document).ready(function () {
+              $('.slider_circle_10').EasySlides({
+                'autoplay': true,
+                'show': 13
+              })
+            });
+          </script>
+        </section> -->
+
+        <!-- <iframe src="./easy_slides.test.html" seamless onload="this.width=screen.width;this.height=screen.height;">
+        </iframe> -->
+        <object type="text/html" class="mw-100 mh-100" seamless onload="this.width=screen.width;this.height=screen.height;" data="./easy_slides.test.html" style="border:none;  "></object>
         
+
+      
+
 <!-- 
-        <div class="container11">
-          <div class="carousel11">
-            <div class="item a"><img src="assets/img/img-0.png" alt=""></div>
-            <div class="item b"><img src="assets/img/img-1.png" alt=""></div>
-            <div class="item c"><img src="assets/img/img-2.png" alt=""></div>
-            <div class="item d"><img src="assets/img/img-3.png" alt=""></div>
-            <div class="item e"><img src="assets/img/img-4.png" alt=""></div>
-            <div class="item f"><img src="assets/img/img-5.png" alt=""></div>
+        <div class="clearfix">
+          <div class="gallery">
+
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-18.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-19.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-20.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-21.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item ">
+              <div class="embed ">
+                <li>
+
+                  <img src="assets/img/img-22.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-23.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item ">
+              <div class="embed ">
+                <li>
+
+                  <img src="assets/img/img-24.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item ">
+              <div class="embed ">
+                <li>
+
+                  <img src="assets/img/img-25.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item ">
+              <div class="embed ">
+                <li>
+
+                  <img src="assets/img/img-26.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item ">
+              <div class="embed ">
+                <li>
+
+                  <img src="assets/img/img-27.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item  ">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-28.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-29.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item  ">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-30.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-31.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item  ">
+              <div class="embed ">
+                <li>
+
+                  <img src="assets/img/img-32.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item  ">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-33.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item ">
+              <div class="embed ">
+                <li>
+
+                  <img src="assets/img/img-34.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-35.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-36.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-37.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-38.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-39.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-40.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-41.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-42.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-43.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-44.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-45.webp" />
+                </li>
+              </div>
+            </div>
+            <div class="gallery__item">
+              <div class="embed">
+                <li>
+
+                  <img src="assets/img/img-46.webp" />
+                </li>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="next">Next</div>
-        <div class="prev">Prev</div>
+        <div class="more">Show more</div>
+        <div class="less">Show less</div>
+        <div class="less3">Show less333</div> -->
 
-      </div>  -->
+<!-- 
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $('.gallery li:lt(0)').show(300);
+            $('.gallery').hide();
+            $('.less').hide();
+            var items = 28;
+            var shown = 3;
 
+            $('.more').click(function () {
+              $(".gallery").slice(0, 3).show()
+              $('.less').show();
+              // $('.gallery').show();
+              shown = $('.gallery li:visible').length + 3;
+              if (shown < items) {
+                $('.gallery li:lt(' + shown + ')').show(300);
+              } else {
+                $('.gallery li:lt(' + items + ')').show(300);
+                $('.more').hide();
+              }
+            });
+            $('.less').click(function () {
+              $('.gallery li').not(':lt(3)').hide(300);
+              $('.more').show();
+              $('.less').hide();
+            });
+            $('.less3').click(function () {
 
- <!-- <div class="carousel_wrapper">
-  <div class="carousel2">
-    <div class="slide2 one">
-      <img src="assets/img/img-5.png" />
-    </div>
-    <div class="slide2 two">
-      <img src="assets/img/img-0.png" />
-    </div>
-    <div class="slide2 three">
-      <img src="assets/img/img-1.png" />
-    </div>
-    <div class="slide2 four">
-      <img src="assets/img/img-2.png" />
-    </div>
-    <div class="slide2 five">
-      <img src="assets/img/img-3.png" />
-    </div>
-    <div class="slide2 six">
-      <img src="assets/img/img-4.png" />
-    </div>
-
-
-    </div>
-  </div> -->
-
-  <!-- <iframe src="index.html" frameborder="0" style="height: 385px; overflow:scroll; width: 100%" src="http://www.cbox.ws/box/?boxid=439&boxtag=7868&sec=main" marginheight="1" marginwidth="1" name="cboxmain" id="cboxmain" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true"></iframe> -->
-  <iframe src="index1.html" frameborder="0" style="height: 385px; overflow:scroll; width: 100%" src="http://www.cbox.ws/box/?boxid=439&boxtag=7868&sec=main" marginheight="1" marginwidth="1" name="cboxmain" id="cboxmain" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true">
-    <!doctype html>
-    <html>
-    
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>jQuery Flipping Gallery Demo</title>
-      <meta name="title" content="jQuery Flipping Gallery by Pete R. | The Pete Design" />
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet'
-        type='text/css'>
-      <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-      <link href='flipping_gallery.css' rel='stylesheet' type='text/css'>
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script type="text/javascript" src="jquery.flipping_gallery.js"></script>
-      <style>
-        html {
-          height: 100%;
-        }
-    
-        body {
-          background: url(img/background.png);
-          padding: 0;
-          text-align: center;
-          font-family: 'open sans';
-          position: relative;
-          margin: 0;
-          height: 100%;
-        }
-    
-        .wrapper {
-          height: auto !important;
-          height: 100%;
-          margin: 0 auto;
-          overflow: hidden;
-        }
-    
-        a {
-          text-decoration: none;
-        }
-    
-        h1,
-        h2 {
-          width: 100%;
-          float: left;
-        }
-    
-        h1 {
-          margin-top: 100px;
-          color: #00B0FF;
-          margin-bottom: 5px;
-          font-size: 70px;
-          letter-spacing: -4px;
-        }
-    
-        h2 {
-          letter-spacing: 0px;
-          color: rgba(255, 255, 255, 0.65);
-          font-weight: 100;
-          margin-top: 10px;
-          margin-bottom: 10px;
-        }
-    
-        .pointer {
-          color: #00B0FF;
-          font-family: 'Pacifico';
-          font-size: 24px;
-          margin-top: 15px;
-          position: absolute;
-          top: 130px;
-          right: -40px;
-        }
-    
-        .pointer2 {
-          color: #00B0FF;
-          font-family: 'Pacifico';
-          font-size: 24px;
-          margin-top: 15px;
-          position: absolute;
-          top: 130px;
-          left: -40px;
-        }
-    
-        pre {
-          margin: 80px auto;
-        }
-    
-        pre code {
-          padding: 35px;
-          border-radius: 5px;
-          font-size: 15px;
-          background: rgba(0, 0, 0, 0.1);
-          border: rgba(0, 0, 0, 0.05) 5px solid;
-          max-width: 500px;
-        }
-    
-        .main {
-          float: left;
-          width: 100%;
-          margin: 0 auto;
-        }
-    
-        .main h1 {
-          padding: 20px 50px 10px;
-          float: left;
-          width: 100%;
-          font-size: 60px;
-          box-sizing: border-box;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          font-weight: 100;
-          margin: 0;
-          padding-top: 25px;
-          font-family: 'Noto Serif';
-          font-style: italic;
-          letter-spacing: 2px;
-          text-transform: capitalize;
-        }
-    
-        .main h1.demo1 {
-          background: #1ABC9C;
-        }
-    
-        .reload.bell {
-          font-size: 12px;
-          padding: 20px;
-          width: 45px;
-          text-align: center;
-          height: 47px;
-          border-radius: 50px;
-          -webkit-border-radius: 50px;
-          -moz-border-radius: 50px;
-        }
-    
-        .reload.bell #notification {
-          font-size: 25px;
-          line-height: 140%;
-        }
-    
-        .reload,
-        .btn {
-          display: inline-block;
-          border: 4px solid #A2261E;
-          border-radius: 5px;
-          -moz-border-radius: 5px;
-          -webkit-border-radius: 5px;
-          background: #CC3126;
-          display: inline-block;
-          line-height: 100%;
-          padding: 0.7em;
-          text-decoration: none;
-          color: #0D2633;
-          width: 100px;
-          line-height: 140%;
-          font-size: 17px;
-          font-family: open sans;
-          font-weight: bold;
-        }
-    
-        .reload:hover {
-          background: #A2261E;
-        }
-    
-        .btn {
-          width: 200px;
-          color: #0D2633;
-          border: none;
-          margin-left: 10px;
-          background: #00B0FF;
-        }
-    
-        .clear {
-          width: auto;
-        }
-    
-        .btn:hover,
-        .btn:hover {
-          background: #00CDFF;
-        }
-    
-        .btns {
-          width: 410px;
-          margin: 50px auto;
-        }
-    
-        .credit {
-          font-family: "noto serif";
-          font-style: italic;
-          text-align: center;
-          color: #3D5455;
-          color: rgba(255, 255, 255, 0.35);
-          padding: 10px;
-          margin: 0 0 40px 0;
-          float: left;
-          width: 100%;
-          letter-spacing: 1px;
-        }
-    
-        .credit a {
-          text-decoration: none;
-          font-weight: bold;
-          color: rgba(255, 255, 255, 0.55);
-        }
-    
-        .back {
-          position: absolute;
-          top: 0;
-          left: 0;
-          text-align: center;
-          display: block;
-          padding: 7px;
-          width: 100%;
-          box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          -webkit-box-sizing: border-box;
-          background: rgba(0, 0, 0, 0.25);
-          font-weight: bold;
-          font-size: 13px;
-          color: rgba(255, 255, 255, 0.5);
-          -webkit-transition: all 200ms ease-out;
-          -moz-transition: all 200ms ease-out;
-          -o-transition: all 200ms ease-out;
-          transition: all 200ms ease-out;
-        }
-    
-        .back:hover {
-          background: rgba(0, 0, 0, 0.5);
-        }
-    
-        .page-container {
-          max-width: 700px;
-          margin: auto;
-          position: relative;
-        }
-    
-        .page-container p {
-          font-size: 21px;
-          font-weight: 100;
-          line-height: 180%;
-        }
-    
-        .page-container h3 {
-          font-family: "noto serif";
-          font-size: 23px;
-        }
-    
-        .gallery {
-          width: 500px;
-          height: 333px;
-          margin: 150px auto 100px;
-        }
-    
-        .navigation {
-          margin-bottom: 150px;
-        }
-    
-        .fg-card,
-        .fg-card>img {
-          border-radius: 3px;
-          width: 90%;
-          height: auto;
-          background-color: rgba(255, 255, 255, 0.459);
-        }
-    
-        @media screen and (max-width: 480px) {
-          .fg-card,
-        .fg-card>img {
-          width: 80%;
-          height: auto;
-        }
-    }
-    
-        .fg-caption {
-          color: white;
-          font-style: italic;
-          font-family: noto serif;
-          font-size: 24px;
-        }
-      </style>
-      <script>
-        $(document).ready(function () {
-          $(".gallery").flipping_gallery({
-            enableScroll: true,
-            autoplay: 2000
+              $('.more').show();
+              $('.gallery').hide();
+            });
           });
-    
-          $(".next").click(function () {
-            $(".gallery").flipForward();
-            return false;
-          });
-          $(".prev").click(function () {
-            $(".gallery").flipBackward();
-            return false;
-          });
-        });
-    
-      </script>
-    </head>
-    
-    <body>
-      <div class="wrapper">
-        <div class="main">
-          <div class="header">
-            <div class="jquery-script-ads">
-              <script type="text/javascript">
-              </script>
-              <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-              </script>
+        </script> -->
+
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script> -->
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+
+
+
+<section id="gallery">
+  <di class="container-product">
+   
+  <div class="row">
+      <div class="col  image">
+        <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid" 
+                         src="assets/img/img-18.webp"
+                         alt="Another alt text">
+            
             </div>
-    
+            <div class="col  image">
+              <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                   src="assets/img/img-19.webp"
+                   alt="Another alt text">
+            
+</div>
+<div class="col  image">
+  <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+       src="assets/img/img-20.webp"
+       alt="Another alt text">
+            
+            </div>
+            <div class="col  image">
+              <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                   src="assets/img/img-21.webp"
+                   alt="Another alt text">
+            </div>
+            <div class="col  image">
+              <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                   src="assets/img/img-22.webp"
+                   alt="Another alt text">
+            </div>
+            <div class="col  image">
+              <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                   src="assets/img/img-18.webp"
+                   alt="Another alt text">
+            </div>
+            <div class="col  image">
+              <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                   src="assets/img/img-23.webp"
+                   alt="Another alt text">
+            </div>
+            <div class="col  image">
+              <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                   src="assets/img/img-24.webp"
+                   alt="Another alt text">
+            </div>
+            <div class="col  image">
+              <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                   src="assets/img/img-25.webp"
+                   alt="Another alt text">
+            </div>
+            <div class="col  image">
+              <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                   src="assets/img/img-26.webp"
+                   alt="Another alt text">
+            </div>
+            <div class="col  image">
+              <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+              src="assets/img/img-27.webp"
+              alt="Another alt text">
+              <!-- <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                data-image="assets/img/img-27.webp"
+                   data-target="#image-gallery">
+                  </a>
+            </div> -->
           </div>
-          <div class="page-container">
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-28.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-29.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-30.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-31.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-32.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-33.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-34.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-35.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-36.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-37.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-38.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-39.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-40.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-41.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-42.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-43.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-44.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-45.webp"
+                 alt="Another alt text">
+          </div>
+          <div class="col  image">
+            <img class="img-thumbnail w-100 h-75 shadow-1-strong rounded mb-4  img-fluid"
+                 src="assets/img/img-46.webp"
+                 alt="Another alt text">
+          </div>
         
-            <div class="gallery"> <a href="#" data-caption="Trekking in Chhomrong, Himalayas, Nepal">
-                <img src="assets/img/img-0.png"></a> <a href="#" >
-                <img src="assets/img/img-1.png"></a> <a href="#" >
-                <img src="assets/img/img-2.png"></a> <a href="#" >
-                <img src="assets/img/img-3.png"></a> <a href="#" >
-                <img src="assets/img/img-4.png"></a> <a href="#" >
-                <img src="assets/img/img-5.png"></a> <a href="#" >
-                <img src="assets/img/img-0.png"></a> <a href="#" >
-                <img src="assets/img/img-1.png"></a> <a href="#" >
-                <img src="assets/img/img-2.png"></a> <a href="#" >
-                <img src="assets/img/img-3.png"></a> </div>
-            <div class="navigation"> <a href="#" class="btn prev">Previous</a> <a href="#" class="btn next">Next</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script type="text/javascript">
-    
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-36251023-1']);
-        _gaq.push(['_setDomainName', 'jqueryscript.net']);
-        _gaq.push(['_trackPageview']);
-    
-        (function () {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    
-      </script>
-    </body>
-    
-    </html></iframe>
-  <!-- <iframe src="index2.html" frameborder="0" style="height: 385px; overflow:scroll; width: 100%" src="http://www.cbox.ws/box/?boxid=439&boxtag=7868&sec=main" marginheight="1" marginwidth="1" name="cboxmain" id="cboxmain" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true"></iframe> -->
-  
 
+
+        <!-- <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="image-gallery-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                        </button>
+
+                        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+      </div>
+     
+    <button class="btn" style="margin:0 0 0 39%;">Load More <br/> 	▼</button>
+    <button class="btn less" style="margin:0 0 0 39%;">▲<br/> Load less </button> 
 </div>
 
+  <!-- <div class="container-product">
+          <div class="image-gallery d-flex flex-row flex-wrap ">
+            
+            <div class="row">
+              <div class="col  image">
+                <div class="imgBox">
+                <img src="assets/img/img-18.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-19.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-20.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
 
-  </section>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-21.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-22.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-23.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-24.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-25.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-26.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-27.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-28.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-29.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-30.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-31.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-32.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-33.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-34.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-35.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-36.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-37.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-38.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-39.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-40.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-41.webp"  class="w-100 shadow-1-strong rounded mb-4  img-fluid"alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-42.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-43.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-44.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-45.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+            <div class="col  image">
+              <div class="imgBox">
+                <img src="assets/img/img-46.webp" class="w-100 shadow-1-strong rounded mb-4  img-fluid" alt="Product$">
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+          <button class="btn">Load More <br/> 	▼</button>
+          <button class="btn less">▲<br/> Load less </button>
+        </div> -->
+      </section>
+
+    </section>
 
     <!-- End About Video Section -->
 
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients section-bg">
-      <div class="container">
 
-        <div class="row">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-            <img src="assets/img/img-9.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-            <img src="assets/img/img-10.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-            <img src="assets/img/img-11.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-            <img src="assets/img/img-12.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-            <img src="assets/img/img-13.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center" data-aos="zoom-in">
-            <img src="assets/img/img-14.png" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="CLIENTS" class="testimonials">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>VALUED CLIENTS</h2>
+          <section id="clients" class="clients  section-bg" style="margin: 0 0 15vh 0 ;">
+            <div class="container">
+              <div class="row"></div>
 
-          <image src="assets/img/img-6.webp" key="image" data-type="image" width="978" height="231"
+
+              <h2>VALUED CLIENTS</h2>
+            </div>
+          </section><!-- End Clients Section -->
+
+          <image src="assets/img/img-6.webp" key="image" data-type="image" width="100%" height="auto"
             preserveAspectRatio="xMidYMid slice" mask="url(#mask-comp-kav30sjb)" data-svg-mask="mask-comp-kav30sjb-svg"
-            style="width: 978px; height: 231px; object-fit: cover;"></image>
+            style="width: 100%; height: auto; object-fit: cover;"></image>
         </div>
 
       </div>
     </section><!-- End Testimonials Section -->
 
 
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-        <div class="text-center">
-
-        </div>
-      </div>
-    </section><!-- End Cta Section -->
-
     <!-- ======= Portfolio Section ======= -->
-    <section id="ABOUT" class="portfolio">
+    <section id="ABOUT" class="portfolio" style="padding:5vh 5vh  60vh 5vh ;background-color: #F7F7F7;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>ABOUT</h2>
+          <section id="counts" class="clients section-bg">
 
-          <div class="row" data-aos="fade-up" data-aos-delay="150">
-            <div class="col-lg-12 d-flex justify-content-center">
-              <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-app">Clients</li>
-                <li data-filter=".filter-card">Products</li>
+            <h2>ABOUT</h2>
+          </section>
 
-              </ul>
+
+          <div class="col-lg-12  justify-content-center" style="padding: 5vh 0 5vh 0;">
+            <img src="assets/img/about.webp" class="img-fluid" alt="">
+            <div class="row portfolio-container" style="padding: 5vh 0 5vh 0;" data-aos="fade-up" data-aos-delay="300">
+              <p style="    margin: 8vh 0 -50vh 0;"><strong>Al- Yaman Metal Machining</strong> is a small innovative
+                CNC-machining
+                company based in Jordan, with its origins and assets moved from Syria in 2013. We have a rich history of
+                accomplishments producing complex mechanical systems and spare parts made for different purposes and
+                working
+                with both regional and local partners since 2004. From nutrition and medical to oil and mobile
+                industries,
+                we are proud of providing a wide range of high-quality integrated products to support such industries
+                over
+                the last decade. Our professional and customized designs were used to tackle complicated problems in the
+                production lines of many factories addressing their urgent needs. The superior precision and accuracy of
+                our
+                products are highly valued by our clients and are continuously defining us as a leading competitor in
+                the
+                local market. With a long-term strategic plan of improving the local CNC-machining industry, we are
+                aiming
+                to extend our business to a wider range of advanced machinery reflecting our deep faith in a brighter
+                CNC-machining future. We are pleased to invite interested clients to call us for a consultation or to
+                visit
+                us at our location.</p>
             </div>
           </div>
 
-          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-14.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clients 1</h4>
-                  <p>Clients</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-14.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="App 1"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img3.webp" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Products 1</h4>
-                  <p>Products</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img3.webp" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="card 1"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-11.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clients 2</h4>
-                  <p>Clients</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-11.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="App 2"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-5.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Products 2</h4>
-                  <p>Products</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-5.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="Card 2"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img2.webp" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Products 3</h4>
-                  <p>Products</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img2.webp" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="card 3"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-12.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clients 3</h4>
-                  <p>Clients</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-12.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="App 3"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
 
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img1.webp" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Products 4</h4>
-                  <p>Products</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img1.webp" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="Card 4"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-9.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clients 4</h4>
-                  <p>Clients</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-9.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="App 4"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img4.webp" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Products 5</h4>
-                  <p>Products</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img4.webp" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="Card 5"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-13.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clients 5</h4>
-                  <p>Clients</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-13.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="app 5"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-4.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Products 6</h4>
-                  <p>Products</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-4.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="card 6"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-10.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clients 6</h4>
-                  <p>Clients</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-10.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="app 6"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-3.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Products 7</h4>
-                  <p>Products</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-3.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="card 7"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-15.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clients 7</h4>
-                  <p>Clients</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-15.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="app 7"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-2.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Products 8</h4>
-                  <p>Products</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-2.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="card 8"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-16.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clients 8</h4>
-                  <p>Clients</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-16.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="app 8"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-1.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Products 9</h4>
-                  <p>Products</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="card 9"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img src="assets/img/img-17.png" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Clients 9</h4>
-                  <p>Clients</p>
-                  <div class="portfolio-links">
-                    <a href="assets/img/img-17.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                      title="app 9"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-
-          <p style="margin-bottom: 10vh;"><strong>Al- Yaman Metal Machining</strong> is a small innovative CNC-machining
-            company based in Jordan, with its origins and assets moved from Syria in 2013. We have a rich history of
-            accomplishments producing complex mechanical systems and spare parts made for different purposes and working
-            with both regional and local partners since 2004. From nutrition and medical to oil and mobile industries,
-            we are proud of providing a wide range of high-quality integrated products to support such industries over
-            the last decade. Our professional and customized designs were used to tackle complicated problems in the
-            production lines of many factories addressing their urgent needs. The superior precision and accuracy of our
-            products are highly valued by our clients and are continuously defining us as a leading competitor in the
-            local market. With a long-term strategic plan of improving the local CNC-machining industry, we are aiming
-            to extend our business to a wider range of advanced machinery reflecting our deep faith in a brighter
-            CNC-machining future. We are pleased to invite interested clients to call us for a consultation or to visit
-            us at our location.</p>
-          <img src="assets/img/about.webp" class="img-fluid" alt="">
         </div>
-
-
-      </div>
     </section><!-- End Portfolio Section -->
 
 
-    <section id="counts" class="counts section-bg">
 
-    </section><!-- End Counts Section -->
 
 
     <section id="CONTACT" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact</h2>
+          <section id="counts" class="clients section-bg">
+
+            <h2>Contact</h2>
+          </section>
 
         </div>
 
         <div class="row mt-5">
+
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.2246346743286!2d35.978318061281776!3d31.910704441039663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5f85cb8fbfef%3A0x7522fea1d033cc07!2z2YXYpNiz2LPZhyDZhNmE2Ygg2YTZhNiz2YTYp9mF2Ycg2KfZhNi52KfZhdmH!5e1!3m2!1sen!2sjo!4v1617852156432!5m2!1sen!2sjo"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1693.4221923405316!2d35.97881552917659!3d31.91082523725389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5fbf88c30353%3A0x9fc73e495ca8f734!2z2LTYsdmD2Kkg2KfZhNmK2YXYp9mGINmE2YTYtdmG2KfYudin2Kog2KfZhNmF2LnYr9mG2YrYqQ!5e0!3m2!1sen!2sjo!4v1619988490889!5m2!1sen!2sjo"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+        <div class="col-lg-12" style="margin: 15vh 0 0 0;">
+          <div class="col-lg-8 mt-5 mt-lg-0">
 
-        <div class="row mt-5">
+            <div class="phone">
+              <div class="contact info">
+                <i class="bi bi-exclamation-octagon"></i>
+                <h4>Inquiries</h4>
+                <p>For any inquiries, questions or commendations, please call: 06-4162922 or fill out the following
+                  form.</p>
 
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Al-Oroubah St., Abu Alanda, Amman, Jordan</p>
+
+
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <div class="row">
+                    <div class="col-md-6 mt-3 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-3">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                        required>
+                    </div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+                  <div class="text-center"><button type="submit">Send Message</button></div>
+                </form>
               </div>
+            </div>
+          </div>
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>Mohamad@alyaman.com</p>
-              </div>
+          <div class="row mt-12">
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+962-798437605</p>
+            <div class="col-lg-10">
+              <div class="info">
+                <div class="address">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>Al-Oroubah St., Abu Alanda, Amman, Jordan</p>
+                </div>
+
+                <div class="email">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>Mohamad@alyaman.com</p>
+                </div>
+
+                <div class="phone">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>+962-798437605</p>
+                </div>
+
+                <div class="phone">
+                  <i class="bi bi-wrench"></i>
+                  <h4>Employment</h4>
+                  <p> To apply for a job with Al- Yaman Metal Machining , please send a cover letter together with your
+                    C.V. to: Ali.m.Awad@mail.com</p>
+                </div>
+
               </div>
 
             </div>
 
-          </div>
 
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
 
           </div>
-
         </div>
 
       </div>
@@ -1084,21 +1748,28 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-4 col-md-6 footer-contact">
-            <h2><strong>Al-Yaman </strong></h2>
+          <div class="col-lg-4 col-md-6 p-5 m-5 footer-contact">
+            <h2 style="color:#1E2D3B;"><strong>Al-Yaman </strong></h2>
             <h6>Metal Machining </h6>
             <br>
             <p>
-              Al-Oroubah St.<br>
-              Abu Alanda<br>
-              Amman <br>
-              Jordan<br>
-              <strong>Phone:</strong>+962-798437605<br>
-              <strong>Email:</strong>Mohamad@alyaman.com<br>
+            <ul style="display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              align-content: flex-end;
+              justify-content: center;
+              align-items: flex-start;">
+              <li> Al-Oroubah St.<br></li>
+              <li> Abu Alanda<br></li>
+              <li>Amman <br></li>
+              <li> Jordan<br></li>
+              <li> <strong>Phone:</strong>+962-798437605<br></li>
+              <li><strong>Email:</strong>Mohamad@alyaman.com<br></li>
+            </ul>
             </p>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-links">
+          <div class="col-lg-4 col-md-6 m-5 p-5 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#HOME">Home</a></li>
@@ -1122,7 +1793,8 @@
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://web.facebook.com/pages/%D8%B4%D8%B1%D9%83%D8%A9-%D8%A7%D9%84%D9%8A%D9%85%D8%A7%D9%86-%D9%84%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B9%D8%AF%D9%86%D9%8A%D8%A9/1476527009123507?_rdc=1&_rdr"
+          class="facebook"><i class="bx bxl-facebook"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -1142,74 +1814,22 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
 
   <!-- Code injected by live-server -->
-  <script  type="text/javascript" src="/jquery.waterwheelCarousel.min.js">
+  <script type="text/javascript" src="/jquery.waterwheelCarousel.min.js">
   </script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
 
-<script type="text/javascript">
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-<script type="text/javascript">
-  var carousel = $(".carousel11"),
-    currdeg  = 0;
-
-
-$(".next").on("click", { d: "n" }, rotate);
-$(".prev").on("click", { d: "p" }, rotate);
-
-function rotate(e){
-  if(e.data.d=="n"){
-    currdeg = currdeg - 60;
-  }
-  if(e.data.d=="p"){
-    currdeg = currdeg + 60;
-  }
-  carousel.css({
-    "-webkit-transform": "rotateY("+currdeg+"deg)",
-    "-moz-transform": "rotateY("+currdeg+"deg)",
-    "-o-transform": "rotateY("+currdeg+"deg)",
-    "transform": "rotateY("+currdeg+"deg)"
-  });
-}
-</script>
 
   <script type="text/javascript">
     // <![CDATA[  <-- For SVG support
@@ -1249,11 +1869,100 @@ function rotate(e){
 	// ]]>
   </script>
   <script type="text/javascript">
-    $(document).ready(function() {
-    $('.carousel5').carousel();
-  });
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+  </script>
+  <script type="text/javascript">
+    var carousel = $(".carousel11"),
+      currdeg = 0;
+
+
+    $(".next").on("click", { d: "n" }, rotate);
+    $(".prev").on("click", { d: "p" }, rotate);
+
+    function rotate(e) {
+      if (e.data.d == "n") {
+        currdeg = currdeg - 60;
+      }
+      if (e.data.d == "p") {
+        currdeg = currdeg + 60;
+      }
+      carousel.css({
+        "-webkit-transform": "rotateY(" + currdeg + "deg)",
+        "-moz-transform": "rotateY(" + currdeg + "deg)",
+        "-o-transform": "rotateY(" + currdeg + "deg)",
+        "transform": "rotateY(" + currdeg + "deg)"
+      });
+    }
   </script>
 
+  <script type="text/javascript">
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+	// ]]>
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.carousel5').carousel();
+    });
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $(".col").slice(0, 0).show()
+    $(".btn").fadeIn('slow')
+    $(".less").hide()
+  });
+  // $(.btn).css({transform: "translate"})
+    $(".btn").on("click", function () {
+      $(".col:hidden").slice(0, 3).slideDown()
+      if ($(".col:hidden").length == 0) {
+        $(".btn").hide()
+        $(".less").fadeIn('slow')
+      }
+    });
+    $('.less').click(function () {
+      $(".col:visible").fadeOut('slow')
+      // $('.btn').show();
+      $(".btn").fadeIn('slow')
+      $(".less").fadeOut('fast')
+// $('.col').hide();
+});
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </body>
 
 </html>
